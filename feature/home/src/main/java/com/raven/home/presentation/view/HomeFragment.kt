@@ -1,18 +1,15 @@
 package com.raven.home.presentation.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.raven.home.R
-import com.raven.home.data.remote.entities.NewsResponse
 import com.raven.home.presentation.adapters.NewsAdapter
 import com.raven.home.presentation.view.utils.LoadingView
 import com.raven.home.presentation.viewmodel.HomeViewModel
