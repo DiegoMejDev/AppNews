@@ -1,17 +1,17 @@
 package com.raven.home.domain.usecases
 
 import com.raven.core.bases.BaseUseCase
+import com.raven.home.data.remote.entities.NewItemResponse
 import com.raven.home.domain.HomeDataSource
 import com.raven.home.domain.mapper.GetNewsMapper
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GeNewsUseCase @Inject constructor(
+class GetNewsUseCase @Inject constructor(
     private val dataSource: HomeDataSource,
     private val mapper: GetNewsMapper
-) : BaseUseCase<Unit, List<String>>() {
-
-    override fun execute(params: Unit): Flow<List<String>> {
-        TODO("Get the news list from your repository and use your mapper for your viewModel")
+) : BaseUseCase<Unit, List<NewItemResponse>>() {
+    override suspend fun execute(params: Unit): Flow<List<NewItemResponse>> {
+        return dataSource.getNews()
     }
 }

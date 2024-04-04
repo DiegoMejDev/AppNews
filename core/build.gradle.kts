@@ -10,4 +10,5 @@ dependencies {
     di()
     general()
     testing()
+    network()
 }

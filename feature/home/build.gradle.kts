@@ -20,4 +20,5 @@ dependencies {
     network()
 
     implementation(project(":core"))
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 }
